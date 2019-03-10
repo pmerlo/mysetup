@@ -2,6 +2,6 @@
 
 ```bash
 git clone https://github.com/pmerlo/provision.git
-ansible-playbook local.yml --become --extra-vars "USER=X EMAIL=Y" -K
+ansible-playbook local.yml -K -e "USER=X EMAIL=Y"  # replace
 ```
 
