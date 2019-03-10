@@ -1,0 +1,12 @@
+---
+- include_tasks: upgrade.yml
+- include_tasks: python3.yml
+- include_tasks: tools.yml
+
+- include_tasks: add_key_repo_package.yml
+  loop: "{{package_configs}}"
+  loop_control:
+    loop_var: package_config
+
+- include_tasks: emacs.yml
+

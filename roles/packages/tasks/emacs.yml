@@ -1,0 +1,12 @@
+---
+- name: Copy Emacs configuration
+  copy:
+    src: "emacs/{{item}}"
+    dest: "{{HOME}}/"
+    owner: "{{USER}}"
+    group: "{{USER}}"
+    mode: "664"
+  with_items:
+    - ".emacs"
+    - ".emacs.d"
+

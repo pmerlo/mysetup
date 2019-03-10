@@ -1,0 +1,14 @@
+---
+- name: Install tools
+  apt:
+    name:
+      - gnome-tweak-tool
+      - gnome-shell-extensions
+      - chrome-gnome-shell
+      - dconf-cli
+      - curl
+      - htop
+      - httpie
+      - nmap
+      - tree
+

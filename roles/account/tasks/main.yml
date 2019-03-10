@@ -1,0 +1,16 @@
+---
+- name: Generate ssh key pair
+  user:
+    name: "{{USER}}"
+    generate_ssh_key: yes
+    ssh_key_bits: 4096
+    ssh_key_comment: "{{EMAIL}}"
+
+- name: Configure git
+  template:
+    src: gitconfig.j2
+    dest: "{{HOME}}/.gitconfig"
+    owner: "{{USER}}"
+    group: "{{USER}}"
+    mode: "664"
+

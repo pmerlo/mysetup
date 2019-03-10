@@ -1,0 +1,21 @@
+---
+package_configs:
+  - name: Node.js
+    key: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+    repo: deb https://deb.nodesource.com/node_10.x xenial main
+    package: nodejs
+
+  - name: Google Chrome
+    key: https://dl-ssl.google.com/linux/linux_signing_key.pub
+    repo: deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+    package: google-chrome-stable
+
+  - name: Visual Studio Code
+    key: https://packages.microsoft.com/keys/microsoft.asc
+    repo: deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
+    package: code
+
+  - name: Emacs
+    repo: ppa:kelleyk/emacs
+    package: emacs26
+

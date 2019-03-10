@@ -1,0 +1,14 @@
+---
+- name: provision
+  hosts: localhost
+  become: yes
+
+  vars:
+    USER: ""
+    EMAIL: ""
+    HOME: "/home/{{USER}}"
+
+  roles:
+    - account
+    - packages
+

@@ -1,0 +1,14 @@
+---
+- name: "Add {{package_config.name}} gpg key"
+  apt_key:
+    url: "{{package_config.key}}"
+  when: package_config.key is defined
+
+- name: "Add {{package_config.name}} repository"
+  apt_repository:
+    repo: "{{package_config.repo}}"
+
+- name: "Install {{package_config.package}}"
+  apt:
+    name: "{{package_config.package}}"
+
