@@ -9,6 +9,7 @@
   '(neotree
     magit
     swiper
+    yaml-mode
     zenburn-theme))
 
 (mapc #'(lambda (package)
