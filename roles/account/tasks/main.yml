@@ -1,12 +1,17 @@
 ---
-- name: Generate ssh key pair
+- name: "Generate ssh key pair"
   user:
     name: "{{USER}}"
     generate_ssh_key: yes
     ssh_key_bits: 4096
     ssh_key_comment: "{{EMAIL}}"
+  register: user_result
 
-- name: Configure git
+- name: "Store public key"
+  set_fact:
+    public_key: "{{user_result.ssh_public_key}}"
+
+- name: "Configure git"
   template:
     src: gitconfig.j2
     dest: "{{HOME}}/.gitconfig"

@@ -12,3 +12,7 @@
     - account
     - packages
 
+  post_tasks:
+    - name: "Print public key"
+      debug:
+        var: public_key

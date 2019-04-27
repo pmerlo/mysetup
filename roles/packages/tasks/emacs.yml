@@ -1,5 +1,5 @@
 ---
-- name: Copy Emacs configuration
+- name: "Copy Emacs configuration"
   copy:
     src: "emacs/{{item}}"
     dest: "{{HOME}}/"

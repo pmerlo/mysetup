@@ -1,0 +1,16 @@
+---
+- name: "Install docker from apt"
+  apt:
+    name:
+      - docker.io
+      - docker-compose
+
+- name: "Add group docker"
+  group:
+    name: docker
+
+- name: "Add user {{USER}} to group docker"
+  user:
+    name: "{{USER}}"
+    groups: docker
+    append: yes

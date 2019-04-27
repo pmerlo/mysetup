@@ -1,5 +1,5 @@
 ---
-- name: Install tools
+- name: "Install tools from apt"
   apt:
     name:
       - gnome-tweak-tool

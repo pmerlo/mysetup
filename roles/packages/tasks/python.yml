@@ -1,0 +1,21 @@
+---
+- name: "Install python from apt"
+  apt:
+    name:
+      - python
+      - python-dev
+      - python-pip
+      - python3
+      - python3-dev
+      - python3-pip
+
+- name: "Install python packages with pip"
+  pip:
+    executable: "{{item}}"
+    name:
+      - pip
+      - setuptools
+      - virtualenv
+  with_items:
+    - pip2
+    - pip3
