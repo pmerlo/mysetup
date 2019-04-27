@@ -11,6 +11,19 @@
   set_fact:
     public_key: "{{user_result.ssh_public_key}}"
 
+- name: "Add bash aliases"
+  blockinfile:
+    dest: "/home/{{USER}}/.bashrc"
+    block: |
+      alias ll='ls -ls'
+      alias la='ls -lsa'
+      alias psgrep='ps aux | grep'
+      alias tree='tree --dirsfirst'
+      alias emcli='emacs -nw'
+      alias dormac='docker container rm $(docker container ls -aq)'
+      alias dormai='docker image rm $(docker image ls -aq)'
+
+
 - name: "Configure git"
   template:
     src: gitconfig.j2
