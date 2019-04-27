@@ -1,4 +1,4 @@
-# setup
+# mysetup
 
 ```bash
 git clone https://github.com/pmerlo/mysetup.git
