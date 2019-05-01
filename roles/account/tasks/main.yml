@@ -19,10 +19,17 @@
       alias la='ls -lsa'
       alias psgrep='ps aux | grep'
       alias tree='tree --dirsfirst'
+      
+      # Emacs in terminal
       alias emcli='emacs -nw'
+      
+      # Docker
       alias dormac='docker container rm $(docker container ls -aq)'
       alias dormai='docker image rm $(docker image ls -aq)'
-
+      
+      # OpenSSL
+      alias csr='openssl req -verify -text -noout -in'
+      alias cert='openssl x509 -text -noout -in'
 
 - name: "Configure git"
   template:
