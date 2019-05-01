@@ -6,7 +6,9 @@
   (package-refresh-contents))
 
 (defvar myPackages
-  '(neotree
+  '(docker-compose-mode
+    dockerfile-mode
+    neotree
     magit
     swiper
     yaml-mode
