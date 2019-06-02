@@ -1,8 +1,4 @@
 ---
-- name: "Wait for apt to unlock"
-  shell: while pgrep -u root apt >/dev/null 2>&1; do sleep 2; done;
-  changed_when: False
-
 - name: "Update package index"
   apt:
     update_cache: yes
