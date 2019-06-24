@@ -18,7 +18,7 @@
       alias ll='ls -ls'
       alias la='ls -lsa'
       alias psgrep='ps aux | grep'
-      alias tree='tree --dirsfirst'
+      alias tree='tree --dirsfirst -F'
       
       # Emacs in terminal
       alias emcli='emacs -nw'
