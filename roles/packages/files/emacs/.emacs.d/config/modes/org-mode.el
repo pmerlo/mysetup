@@ -9,8 +9,8 @@
 (setq org-agenda-window-setup (quote current-window))
 
 (setq org-deadline-warning-days 14)
-
 (setq org-duration-format (quote h:mm))
+(setq org-enable-priority-commands nil)
 
 (setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
 (setq org-refile-allow-creating-parent-nodes 'confirm)
