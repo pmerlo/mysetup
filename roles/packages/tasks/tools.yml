@@ -11,4 +11,4 @@
       - httpie
       - nmap
       - tree
-
+      - vim
