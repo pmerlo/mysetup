@@ -15,7 +15,7 @@ package_configs:
     repo: deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
     package: code
 
-  - name: Emacs
-    repo: ppa:kelleyk/emacs
-    package: emacs26
+#  - name: Emacs
+#    repo: ppa:kelleyk/emacs
+#    package: emacs26
 
