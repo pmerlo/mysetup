@@ -2,6 +2,7 @@
 - name: "Install tools from apt"
   apt:
     name:
+      - emacs
       - gnome-tweak-tool
       - gnome-shell-extensions
       - chrome-gnome-shell
@@ -12,3 +13,15 @@
       - nmap
       - tree
       - vim
+
+- name: "Copy Emacs configuration"
+  copy:
+    src: "emacs/{{item}}"
+    dest: "{{HOME}}/"
+    owner: "{{USER}}"
+    group: "{{USER}}"
+    mode: "664"
+  with_items:
+    - ".emacs"
+    - ".emacs.d"
+

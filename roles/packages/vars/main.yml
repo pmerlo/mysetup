@@ -14,8 +14,3 @@ package_configs:
     key: https://packages.microsoft.com/keys/microsoft.asc
     repo: deb [arch=amd64] http://packages.microsoft.com/repos/vscode stable main
     package: code
-
-#  - name: Emacs
-#    repo: ppa:kelleyk/emacs
-#    package: emacs26
-
